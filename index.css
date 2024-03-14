@@ -1,0 +1,125 @@
+body {
+    font-family: 'Exo 2', sans-serif;
+    color: #333; /* Darker font color */
+} 
+.dropdown-item {
+    padding-top: 0.25rem; /* 4px */
+    padding-bottom: 0.25rem; /* 4px */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+.dropdown-item:hover {
+    background-color: #f3f4f6; /* Light gray background on hover */
+}
+.sidebar {
+    /* Equivalent to width: 18%; height: 100%; */
+    width: 18vw;
+    height: 100vh;
+    /* ... Other styles ... */
+}
+.sidebar img {
+    /* Tailwind classes for max-w-xs, mr-2, bg-gray-200, rounded, p-1 */
+    max-width: 2.5rem; /* or 40px */
+    margin-right: 0.5rem;
+    background-color: #e2e8f0; /* Assuming --inputColor is a light grey */
+    border-radius: 0.125rem; /* or 2px */
+    padding: 0.5rem;
+}
+.sidebar h2 {
+    /* Assuming --h2FontSize is roughly 1.5rem and --PrimaryColor is a CSS variable for a color */
+    font-size: 1.5rem;
+    color: #5a67d8; /* Replace with your primary color variable */
+}
+.feature-item {
+display: inline-block;
+margin-right: 8px;
+background: #F9FAFB;
+color: #1F2937;
+padding: 8px 16px;
+border-radius: 6px;
+border: 1px solid #D1D5DB;
+font-size: 14px;
+}
+
+.add-feature-btn {
+display: inline-block;
+margin-right: 8px;
+padding: 8px 16px;
+background-color: #FFFFFF;
+border: 1px solid #D1D5DB;
+color: #1F2937;
+cursor: pointer;
+border-radius: 6px;
+font-size: 14px;
+}
+
+.add-feature-btn:hover {
+background-color: #F3F4F6;
+}
+
+/*Responsive Adjustment */
+
+@media (max-width: 768px) {
+    .w-64 {
+        width: 100%;
+    }
+    .flex-1 {
+        margin-top: 20px;
+    }
+    .p-4 {
+        padding: 1rem !important;
+    }
+    .px-6 {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+    .py-4, .py-1 {
+        padding-top: 0.5rem !important;
+        padding-bottom: 0.5rem !important;
+    }
+    .mt-4, .mt-6 {
+        margin-top: 1rem !important;
+    }
+    .text-xl {
+        font-size: 1.25rem !important; /* 20px */
+    }
+    .text-lg, .text-sm, .text-xs {
+        font-size: 1rem !important; /* 16px */
+    }
+    #addRowBtn {
+        display: block;
+        width: 100%;
+    }
+    .table-responsive {
+        overflow-x: auto;
+    }
+}
+/* Hover Effect on folder */
+.folder-item {
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.folder-item:hover {
+    background-color: #f7fafc;
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.team-item {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.team-item:hover {
+    background-color: #edf2f7;
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo:hover {
+    transform: rotate(360deg);
+    transition: transform 0.8s ease-in-out;
+}
+
+.profile-pic:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}

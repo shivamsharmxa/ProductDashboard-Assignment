@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body class="bg-gray-100 flex flex-col md:flex-row">
+
+    <div class="bg-white w-full md:w-64 p-6 rounded-lg shadow-lg">
+        <div class="flex items-center justify-between mb-6">
+            <div class="flex items-center">
+                <div class="mr-4">
+                    <img src="https://yt3.googleusercontent.com/dzbkpxn6UbiztRe7QzKzGC6cYldtnalVydEGsfdcRv5lNzOPI2YjK-aE0etjLhTeRc9_dH7eeA=s900-c-k-c0x00ffffff-no-rj"
+                        alt="InnovateHub Logo" class="w-5 h-5 rounded-full">
+                </div>
+                <span class="text-lg font-bold text-gray-800">InnovateHub</span>
+            </div>
+            <img src="https://pics.craiyon.com/2023-05-31/220e4c73f6674d46a84840ebde9f9bc8.webp" alt="Random Profile"
+                class="w-8 h-8 rounded-full transition-transform duration-200 hover:scale-110">
+        </div>
+
+        <div class="space-y-4">
+
+            <div class="team-item p-4 rounded-md border border-gray-200">
+                <h3 class="text-sm font-bold text-gray-900">Teams</h3>
+                <div class="mt-2 space-y-1">
+                    <div class="flex items-center justify-between cursor-pointer">
+                        <div class="flex items-center">
+                            <i class="fas fa-users text-gray-500 mr-2"></i>
+                            <span class="text-sm font-bold text-gray-900">Design team</span>
+                        </div>
+                        <span class="text-sm font-bold text-gray-900">3</span>
+                    </div>
+                    <div class="flex items-center justify-between cursor-pointer">
+                        <div class="flex items-center">
+                            <i class="fas fa-users text-gray-500 mr-2"></i>
+                            <span class="text-sm font-bold text-gray-900">Marketing team</span>
+                        </div>
+                        <span class="text-sm font-bold text-gray-900">2</span>
+                    </div>
+                    <div class="flex items-center justify-between cursor-pointer">
+                        <div class="flex items-center">
+                            <i class="fas fa-users text-gray-500 mr-2"></i>
+                            <span class="text-sm font-bold text-gray-900">Development team</span>
+                        </div>
+                        <span class="text-sm font-bold text-gray-900">1</span>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+
+            <div class="mt-4">
+                <h3 class="text-xs font-semibold text-gray-600 uppercase tracking-wide">Folders</h3>
+                <div class="mt-2 space-y-1">
+                    <div x-data="{ open: false }">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <i class="far fa-folder text-gray-500 mr-2"></i>
+                                <span class="text-sm font-bold text-gray-900">Products</span>
+                            </div>
+                            <button @click="open = !open" class="text-gray-500 focus:outline-none">
+                                <i class="fas fa-chevron-down" :class="{'transform rotate-180': open}"></i>
+                            </button>
+                        </div>
+                        <div x-show="open" class="ml-4 space-y-2">
+                            <div class="dropdown-item rounded-md cursor-pointer">
+                                <i class="far fa-file-alt text-gray-500 mr-2"></i>
+                                <span class="text-sm font-bold text-gray-900">Roadmap</span>
+                            </div>
+                            <div class="dropdown-item">
+                                <i class="far fa-file-alt text-gray-500 mr-2"></i>
+                                <span class="text-sm font-semibold text-gray-900 cursor-pointer">Feedback</span>
+                            </div>
+                            <div class="dropdown-item">
+                                <i class="far fa-file-alt text-gray-500 mr-2"></i>
+                                <span class="text-sm font-semibold text-gray-900 cursor-pointer">Performance</span>
+                            </div>
+                            <div class="dropdown-item">
+                                <i class="far fa-file-alt text-gray-500 mr-2"></i>
+                                <span class="text-sm font-semibold text-gray-900 cursor-pointer">Analytics</span>
+                            </div>
+                            <div class="dropdown-item">
+                                <i class="far fa-file-alt text-gray-500 mr-2"></i>
+                                <span class="text-sm font-semibold text-gray-900 cursor-pointer">Team</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-4 folder-item">
+                <div class="flex items-center">
+                    <i class="far fa-folder text-black-500 mr-2"></i>
+                    <span class="text-sm font-bold text-gray-900 cursor-pointer">Sales</span>
+                </div>
+            </div>
+            
+            <div class="mt-4 folder-item">
+                <div class="flex items-center">
+                    <i class="far fa-folder text-black-500 mr-2"></i>
+                    <span class="text-sm font-bold text-gray-900 cursor-pointer">Design</span>
+                </div>
+            </div>
+            
+            <div class="mt-4 folder-item">
+                <div class="flex items-center">
+                    <i class="far fa-folder text-black-500 mr-2"></i>
+                    <span class="text-sm font-bold text-gray-900 cursor-pointer">Office</span>
+                </div>
+            </div>
+            
+            <div class="mt-4 folder-item">
+                <div class="flex items-center">
+                    <i class="far fa-folder text-black-500 mr-2"></i>
+                    <span class="text-sm font-bold text-gray-900 cursor-pointer">Legal</span>
+                </div>
+            </div>
+
+            <div class="mt-6 space-y-1">
+                <div class="flex items-center">
+                    <i class="fas fa-user-friends text-gray-500 mr-2"></i>
+                    <span class="text-sm font-medium text-gray-900 cursor-pointer">Invite teammates</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-question-circle text-gray-500 mr-2"></i>
+                    <span class="text-sm font-medium text-gray-900 cursor-pointer">Help and first steps</span>
+                </div>
+            </div>
+
+            <div class="mt-6 pt-6 border-t border-gray-200 text-center">
+                <span class="text-xs font-semibold text-gray-800">7 days left on trial</span>
+                <button class="mt-2 py-2 px-4 bg-black text-white text-sm font-semibold rounded-full focus:outline-none hover:bg-gray-800">
+                    Add billing
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+
+
+
+    <div class="flex-1 flex flex-col">
+        <!-- Top Bar -->
+        <div class="table-responsive">
+        <div class="bg-white shadow-sm p-4 flex items-center justify-between">
+            <div>
+                <h1 class="text-xl font-semibold">Products</h1>
+            </div>
+            <div class="flex space-x-4">
+        
+                <!-- Brands Dropdown -->
+                <div class="relative inline-block text-left ">
+                    <div class="flex items-center bg-gray-200 rounded-full px-3 py-1 cursor-pointer" id="brandsDropdown">
+                        <span class="text-gray-600 ">All brands</span>
+                        <button class="ml-2">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <!-- Dropdown menu, dynamically populated -->
+                    <div id="brandsMenu" class="origin-top-right absolute right-0 mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden">
+                        <div class="py-1" role="none">
+                            <!-- Dropdown menu items will be injected here -->
+                        </div>
+                    </div>
+                </div>
+                <!-- Other dropdowns and buttons -->
+                <div class="relative">
+                    <input type="text" id="searchInput" class="bg-gray-200 rounded-full px-4 py-1" placeholder="Search for...">
+                    <button id="searchBtn" class="absolute right-2 top-0 mt-1 mr-4">
+                        <i class="fas fa-search text-gray-400"></i>
+                    </button>
+                </div>
+                <!-- Profile and other icons -->
+            </div>
+        </div>
+
+        <!-- Table -->
+        <div class="flex flex-col overflow-auto p-4">
+            <table id="data-table" class="min-w-full divide-y divide-gray-200 text-sm">
+              <thead class="bg-gray-50">
+                <tr class="text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  <th scope="col" class="px-6 py-3">Brand</th>
+                  <th scope="col" class="px-6 py-3">Description</th>
+                  <th scope="col" class="px-6 py-3">Members</th>
+                  <th scope="col" class="px-6 py-3">Categories</th>
+                  <th scope="col" class="px-6 py-3">Tags</th>
+                  <th scope="col" class="px-6 py-3">Next Meeting</th>
+                </tr>
+              </thead>
+              <tbody class="bg-white divide-y divide-gray-200">
+                <!-- Row 1 -->
+                <tr>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <div class="flex items-center">
+                      <input type="checkbox" class="form-checkbox text-indigo-600 mr-3">
+                      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968770.png" alt="Wix Logo" class="h-6 w-6 mr-2">
+                      <span class="ml-2">Wix</span>
+                    </div>
+                  </td>
+                  <td class="px-6 py-4">
+                    Develop a personalized fitness app
+                  </td>
+                  <td class="px-6 py-4">
+                    <div class="flex -space-x-1 overflow-hidden">
+                      <img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://img.freepik.com/free-photo/smiling-man_1098-15443.jpg" alt="">
+                      <img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://i.pinimg.com/originals/ae/ec/c2/aeecc22a67dac7987a80ac0724658493.jpg" alt="">
+                      <img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://i.pinimg.com/originals/ae/ec/c2/aeecc22a67dac7987a80ac0724658493.jpg" alt="">
+                      <!-- More member avatars -->
+                    </div>
+                  </td>
+                  <td class="px-6 py-4">
+                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-purple-100 text-purple-800">
+                      Automation
+                    </span>
+                  </td>
+                  <td class="px-6 py-4 text-sm text-gray-500">
+                    #DigitalTransformation
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    in 30 minutes
+                  </td>
+                </tr>
+
+                <tr>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                      <div class="flex items-center">
+                        <input type="checkbox" class="form-checkbox text-indigo-600 mr-3">
+                        <img src="https://e1.pngegg.com/pngimages/260/212/png-clipart-macos-app-icons-shopify-thumbnail.png" alt="Wix Logo" class="h-6 w-6 mr-2">
+                        <span class="ml-2">Shopify</span>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4">
+                      Introduced a cloud based programme
+                    </td>
+                    <td class="px-6 py-4">
+                      <div class="flex -space-x-1 overflow-hidden">
+                        <img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://i.pinimg.com/originals/ae/ec/c2/aeecc22a67dac7987a80ac0724658493.jpg" alt="">
+                        <img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://i.pinimg.com/originals/ae/ec/c2/aeecc22a67dac7987a80ac0724658493.jpg" alt="">
+                        <img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://i.pinimg.com/originals/ae/ec/c2/aeecc22a67dac7987a80ac0724658493.jpg" alt="">
+                        <!-- More member avatars -->
+                      </div>
+                    </td>
+                    <td class="px-6 py-4">
+                      <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                        E-commerce B2B
+                      </span>
+                    </td>
+                    <td class="px-6 py-4 text-sm text-gray-500">
+                      #OnlineShopping
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                      About an Hour
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                      <div class="flex items-center">
+                        <input type="checkbox" class="form-checkbox text-indigo-600 mr-3">
+                        <img src="https://static-00.iconduck.com/assets.00/mailchimp-icon-2048x2048-7tjwbg42.png" alt="MailChimp Logo" class="h-6 w-6 mr-2">
+                        <span class="ml-2">Mailchimp</span>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4">
+                     Develope a mobile application
+                    </td>
+                    <td class="px-6 py-4">
+                      <div class="flex -space-x-1 overflow-hidden">
+                        <img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://i.pinimg.com/originals/ae/ec/c2/aeecc22a67dac7987a80ac0724658493.jpg" alt="">
+                        <img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://i.pinimg.com/originals/ae/ec/c2/aeecc22a67dac7987a80ac0724658493.jpg" alt="">
+                        <img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://i.pinimg.com/originals/ae/ec/c2/aeecc22a67dac7987a80ac0724658493.jpg" alt="">
+                        <img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://i.pinimg.com/originals/ae/ec/c2/aeecc22a67dac7987a80ac0724658493.jpg" alt="">
+                        <img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://i.pinimg.com/originals/ae/ec/c2/aeecc22a67dac7987a80ac0724658493.jpg" alt="">
+                        <!-- More member avatars -->
+                      </div>
+                    </td>
+                    <td class="px-6 py-4">
+                      <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                       SAAS
+                      </span>
+                      <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">
+                        Mobile
+                       </span>
+                    </td>
+                    <td class="px-6 py-4 text-sm text-gray-500">
+                      #Technovation
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                      In 4 hours
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                      <div class="flex items-center">
+                        <input type="checkbox" class="form-checkbox text-indigo-600 mr-3">
+                        <img src="https://cdn.pixabay.com/photo/2018/05/08/21/29/paypal-3384015_1280.png" alt="MailChimp Logo" class="h-6 w-6 mr-2">
+                        <span class="ml-2">Paypal</span>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4">
+                        an online payment system that allows you to send and receive money around the world
+                    </td>
+                    <td class="px-6 py-4">
+                      <div class="flex -space-x-1 overflow-hidden">
+                        <img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://i.pinimg.com/originals/ae/ec/c2/aeecc22a67dac7987a80ac0724658493.jpg" alt="">
+                        <img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://i.pinimg.com/originals/ae/ec/c2/aeecc22a67dac7987a80ac0724658493.jpg" alt="">
+                        <img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://i.pinimg.com/originals/ae/ec/c2/aeecc22a67dac7987a80ac0724658493.jpg" alt="">
+                      
+                        <!-- More member avatars -->
+                      </div>
+                    </td>
+                    <td class="px-6 py-4">
+                      <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">
+                       MarketPlace
+                      </span>
+                      
+                
+                    </td>
+                    <td class="px-6 py-4 text-sm text-gray-500">
+                      #BuySellOnline
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                      On 15th March
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                      <div class="flex items-center">
+                        <input type="checkbox" class="form-checkbox text-indigo-600 mr-3">
+                        <img src="https://seeklogo.com/images/D/disney-logo-9649A88458-seeklogo.com.png" alt="MailChimp Logo" class="h-6 w-6 mr-2">
+                        <span class="ml-2">Disney</span>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4">
+                    Inform and inspire people around the globe through the power of unparalleled storytelling
+                    </td>
+                    <td class="px-6 py-4">
+                      <div class="flex -space-x-1 overflow-hidden">
+                        <img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://i.pinimg.com/originals/ae/ec/c2/aeecc22a67dac7987a80ac0724658493.jpg" alt="">
+                        <img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://i.pinimg.com/originals/ae/ec/c2/aeecc22a67dac7987a80ac0724658493.jpg" alt="">
+                        
+                        <!-- More member avatars -->
+                      </div>
+                    </td>
+                    <td class="px-6 py-4">
+                      <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-red-800">
+                      B2B
+                      </span>
+                      <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-purple-100 text-red-800">
+                        B2C
+                        </span>
+                      
+                
+                    </td>
+                    <td class="px-6 py-4 text-sm text-gray-500">
+                      #BusinessPartnership
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                      In 6 hours
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                      <div class="flex items-center">
+                        <input type="checkbox" class="form-checkbox text-indigo-600 mr-3">
+                        <img src="https://www.intercom.com/_next/static/images/intercom-logo-7b36b3b2916d7eaacad8cbcec92ead24.png" alt="MailChimp Logo" class="h-6 w-6 mr-2">
+                        <span class="ml-2">Intercom</span>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4">
+                        Making Internet Business Personal
+                    </td>
+                    <td class="px-6 py-4">
+                      <div class="flex -space-x-1 overflow-hidden">
+                        <img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://i.pinimg.com/originals/ae/ec/c2/aeecc22a67dac7987a80ac0724658493.jpg" alt="">
+                        <img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://i.pinimg.com/originals/ae/ec/c2/aeecc22a67dac7987a80ac0724658493.jpg" alt="">
+                        <img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://i.pinimg.com/originals/ae/ec/c2/aeecc22a67dac7987a80ac0724658493.jpg" alt="">
+                        
+                        
+                        <!-- More member avatars -->
+                      </div>
+                    </td>
+                    <td class="px-6 py-4">
+                      <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">
+                      Technology
+                      </span>
+                      <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                        SAAS
+                        </span>
+                      
+                
+                    </td>
+                    <td class="px-6 py-4 text-sm text-gray-500">
+                      #SmallFinance
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                      On 20 March
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                      <div class="flex items-center">
+                        <input type="checkbox" class="form-checkbox text-indigo-600 mr-3">
+                        <img src="https://steelbluemedia.com/wp-content/uploads/2019/06/new-google-favicon-512.png" alt="MailChimp Logo" class="h-6 w-6 mr-2">
+                        <span class="ml-2">Google</span>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4">
+                       Offer a comprehensive cycle method
+                    </td>
+                    <td class="px-6 py-4">
+                      <div class="flex -space-x-1 overflow-hidden">
+                        <img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://i.pinimg.com/originals/ae/ec/c2/aeecc22a67dac7987a80ac0724658493.jpg" alt="">
+                        <img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://i.pinimg.com/originals/ae/ec/c2/aeecc22a67dac7987a80ac0724658493.jpg" alt="">
+                        <img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://i.pinimg.com/originals/ae/ec/c2/aeecc22a67dac7987a80ac0724658493.jpg" alt="">
+                        <img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://i.pinimg.com/originals/ae/ec/c2/aeecc22a67dac7987a80ac0724658493.jpg" alt="">
+                        <img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://i.pinimg.com/originals/ae/ec/c2/aeecc22a67dac7987a80ac0724658493.jpg" alt="">
+                        
+                        
+                        
+                        
+                        <!-- More member avatars -->
+                      </div>
+                    </td>
+                    <td class="px-6 py-4">
+                      <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">
+                      Finance
+                      </span>
+                      <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-purple-100 text-purple-800">
+                        Automation
+                        </span>
+                      
+                
+                    </td>
+                    <td class="px-6 py-4 text-sm text-gray-500">
+                      #SmallFinance
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                      In 30 minutes
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                      <div class="flex items-center">
+                        <input type="checkbox" class="form-checkbox text-indigo-600 mr-3">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwhqZsr5q4Dz-ecvcVg_9WzU0VsmEw6l6pYYaq9RdWKw&s" alt="MailChimp Logo" class="h-6 w-6 mr-2">
+                        <span class="ml-2">Microsoft</span>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4">
+                        Launch an advisory services
+                    </td>
+                    <td class="px-6 py-4">
+                      <div class="flex -space-x-1 overflow-hidden">
+                        <img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://i.pinimg.com/originals/ae/ec/c2/aeecc22a67dac7987a80ac0724658493.jpg" alt="">
+                        <img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://i.pinimg.com/originals/ae/ec/c2/aeecc22a67dac7987a80ac0724658493.jpg" alt="">
+                        <img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://i.pinimg.com/originals/ae/ec/c2/aeecc22a67dac7987a80ac0724658493.jpg" alt="">
+                        <img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://i.pinimg.com/originals/ae/ec/c2/aeecc22a67dac7987a80ac0724658493.jpg" alt="">
+                        <img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://i.pinimg.com/originals/ae/ec/c2/aeecc22a67dac7987a80ac0724658493.jpg" alt="">
+                        
+                        
+                        
+                        
+                        <!-- More member avatars -->
+                      </div>
+                    </td>
+                    <td class="px-6 py-4">
+                      <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">
+                      Publishing
+                      </span>
+                      <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text--800">
+                      Marketiing
+                        </span>
+                      
+                      
+                
+                    </td>
+                    <td class="px-6 py-4 text-sm text-gray-500">
+                      #B2BMarketing
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                      In 4 hours
+                    </td>
+                  </tr>
+                <!-- More rows as needed -->
+              </tbody>
+            </table>
+            <body class="bg-white">
+                <button 
+                id="addRowBtn" 
+                class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            >
+                + Add calculation
+            </button>
+        </div>
+          </div>
+        </body>
+        
+<script src="https://kit.fontawesome.com/your-fontawesome-kit.js"></script>
+<script src="script.js"></script>
+
+</html>
